@@ -23,3 +23,14 @@ Enter name and email address
 
 Click 'Signup' button
     Key Click Any Button    ${LoginPage['New_User_Signup']['SignUp_btn']}
+
+Verify 'Login to your account' is visible
+    Key Verify Expected Text Is Visible    Login to your account
+
+Enter correct email address and password
+    Key Enter Username And Password
+    ...     ${LoginPage['Login_to_your_account']['Email_Address_txtbx']}               ${env['CRED']['EMAIL']}
+    ...     ${LoginPage['Login_to_your_account']['Password_txtbx']}      ${env['CRED']['PASSWORD']}
+
+Click 'Login' button
+    Key Click Any Button    ${LoginPage['Login_to_your_account']['Login_btn']}
