@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.3 on win32)" generated="2024-12-17T11:56:28.251377" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 01 Register User" source="C:\Users\Deepak\Desktop\RobotFrameworkPOM\TestCases\TC_01_Register User.robot">
+<kw name="Suite Initialization" type="SETUP">
+<kw name="Initialization HomePage Variables" owner="homePage">
+<kw name="Read Env File" owner="READ">
+<msg time="2024-12-17T11:56:28.777013" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000027F37F6B0D0&gt;</msg>
+<var>${env}</var>
+<arg>${ENV_FILE}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.774011" elapsed="0.003002"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-17T11:56:28.779484" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000027F37F6B0D0&gt;</msg>
+<arg>${env}</arg>
+<arg>${env}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.778448" elapsed="0.001036"/>
+</kw>
+<kw name="Read Yaml File" owner="READ">
+<msg time="2024-12-17T11:56:28.784040" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
+<var>${HomePage}</var>
+<arg>${COMMON_YAML_FILE}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.780576" elapsed="0.004029"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-17T11:56:28.785156" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
+<arg>${HomePage}</arg>
+<arg>${HomePage}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.784605" elapsed="0.000551"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:28.772007" elapsed="0.013149"/>
+</kw>
+<kw name="Initialization LoginPage Variables" owner="loginPage">
+<kw name="Read Env File" owner="READ">
+<msg time="2024-12-17T11:56:28.793011" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000027F37F71790&gt;</msg>
+<var>${env}</var>
+<arg>${ENV_FILE}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.786254" elapsed="0.006757"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-17T11:56:28.794717" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000027F37F71790&gt;</msg>
+<arg>${env}</arg>
+<arg>${env}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.793605" elapsed="0.001112"/>
+</kw>
+<kw name="Read Yaml File" owner="READ">
+<msg time="2024-12-17T11:56:28.798172" level="INFO">${LoginPage} = {'New_User_Signup': {'Name_txtbx': "//input[@placeholder='Name']", 'Eamil_Address_txtbx': "//input[@data-qa='signup-email']", 'SignUp_btn': "//button[normalize-space()='Signup']"}, 'Login_to_your_acco...</msg>
+<var>${LoginPage}</var>
+<arg>${LOGIN_YAML_FILE}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.795257" elapsed="0.002915"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-17T11:56:28.799233" level="INFO">${LoginPage} = {'New_User_Signup': {'Name_txtbx': "//input[@placeholder='Name']", 'Eamil_Address_txtbx': "//input[@data-qa='signup-email']", 'SignUp_btn': "//button[normalize-space()='Signup']"}, 'Login_to_your_acco...</msg>
+<arg>${LoginPage}</arg>
+<arg>${LoginPage}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.798691" elapsed="0.000542"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:28.785707" elapsed="0.013526"/>
+</kw>
+<kw name="Initialization SignUpPage Variables" owner="signupPage">
+<kw name="Read Env File" owner="READ">
+<msg time="2024-12-17T11:56:28.801365" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000027F37F74590&gt;</msg>
+<var>${env}</var>
+<arg>${ENV_FILE}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.800304" elapsed="0.001061"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-17T11:56:28.801885" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000027F37F74590&gt;</msg>
+<arg>${env}</arg>
+<arg>${env}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.801365" elapsed="0.000520"/>
+</kw>
+<kw name="Read Yaml File" owner="READ">
+<msg time="2024-12-17T11:56:28.809850" level="INFO">${SignupPage} = {'Account_Information': {'Heading_txt': "//b[normalize-space()='Enter Account Information']", 'radio': {'Mr': "(//input[@name='title'])[1]", 'Mrs': "(//input[@name='title'])[2]"}, 'Name_txtbx': "//inp...</msg>
+<var>${SignupPage}</var>
+<arg>${SIGNUP_YAML_FILE}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.801885" elapsed="0.007965"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-17T11:56:28.811852" level="INFO">${SignupPage} = {'Account_Information': {'Heading_txt': "//b[normalize-space()='Enter Account Information']", 'radio': {'Mr': "(//input[@name='title'])[1]", 'Mrs': "(//input[@name='title'])[2]"}, 'Name_txtbx': "//inp...</msg>
+<arg>${SignupPage}</arg>
+<arg>${SignupPage}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.810855" elapsed="0.000997"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:28.799753" elapsed="0.012099"/>
+</kw>
+<kw name="Initialization AccountCreatedPage Variables" owner="accountCreatedPage">
+<kw name="Read Yaml File" owner="READ">
+<msg time="2024-12-17T11:56:28.815851" level="INFO">${AccountCreatedPage} = {'AccountCreated_txt': "//b[normalize-space()='Account Created!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
+<var>${AccountCreatedPage}</var>
+<arg>${ACCOUNTCREATED_YAML_FILE}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.813886" elapsed="0.001965"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-17T11:56:28.816853" level="INFO">${AccountCreatedPage} = {'AccountCreated_txt': "//b[normalize-space()='Account Created!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
+<arg>${AccountCreatedPage}</arg>
+<arg>${AccountCreatedPage}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.816853" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:28.812847" elapsed="0.004006"/>
+</kw>
+<kw name="Initialization DeleteAccountPage Variables" owner="deleteAccountPage">
+<kw name="Read Yaml File" owner="READ">
+<msg time="2024-12-17T11:56:28.819855" level="INFO">${DeleteAccountPage} = {'AccountDeleted_txt': "//b[normalize-space()='Account Deleted!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
+<var>${DeleteAccountPage}</var>
+<arg>${DELETEACCOUNT_YAML_FILE}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.817846" elapsed="0.002009"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-17T11:56:28.820858" level="INFO">${DeleteAccountPage} = {'AccountDeleted_txt': "//b[normalize-space()='Account Deleted!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
+<arg>${DeleteAccountPage}</arg>
+<arg>${DeleteAccountPage}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.820858" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:28.817846" elapsed="0.003012"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:28.771013" elapsed="0.050845"/>
+</kw>
+<test id="s1-t1" name="TC_001:User Registration" line="19">
+<kw name="Launch browser" owner="homePage">
+<kw name="Key Launch Browser" owner="CustomSeleniumLibrary">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:28.827852" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<arg>${NONE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-17T11:56:28.826847" elapsed="2.344355"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-17T11:56:31.172208" elapsed="0.079104"/>
+</kw>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2024-12-17T11:56:28.824850" elapsed="2.427458"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:28.823848" elapsed="2.428460"/>
+</kw>
+<kw name="Navigate to url 'http://automationexercise.com'" owner="homePage">
+<kw name="Key Navigate To Url" owner="CustomSeleniumLibrary">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:31.275325" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-12-17T11:56:31.274306" elapsed="2.813469"/>
+</kw>
+<arg>${env['BASIC']['URL']}</arg>
+<status status="PASS" start="2024-12-17T11:56:31.273303" elapsed="2.814472"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:31.272310" elapsed="2.815465"/>
+</kw>
+<kw name="Verify that home page is visible successfully" owner="homePage">
+<kw name="Key Verify That Expected Element Is Visible Successfully" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:34.092643" elapsed="0.039623"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:34.181911" level="INFO">Element '//a[normalize-space()='Home']' is displayed.</msg>
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:34.132742" elapsed="0.049679"/>
+</kw>
+<arg>${HomePage['Navigation_bar']['Home_lnk']}</arg>
+<status status="PASS" start="2024-12-17T11:56:34.090352" elapsed="0.092069"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:34.089789" elapsed="0.093234"/>
+</kw>
+<kw name="Click on 'Signup / Login' button" owner="homePage">
+<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:34.187293" elapsed="0.080307"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:34.268622" elapsed="0.060183"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:34.329822" level="INFO">Clicking element '(//a[normalize-space()='Signup / Login'])[1]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:34.329822" elapsed="1.683006"/>
+</kw>
+<arg>${HomePage['Navigation_bar']['SignUp_Login_lnk']}</arg>
+<status status="PASS" start="2024-12-17T11:56:34.185030" elapsed="1.827798"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:34.183776" elapsed="1.829052"/>
+</kw>
+<kw name="Verify 'New User Signup!' is visible" owner="loginPage">
+<kw name="Key Verify Expected Text Is Visible" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.018562" elapsed="0.036818"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:36.149618" level="INFO">Current page contains text 'New User Signup!'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.055380" elapsed="0.094816"/>
+</kw>
+<arg>New User Signup!</arg>
+<status status="PASS" start="2024-12-17T11:56:36.016488" elapsed="0.133708"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:36.014461" elapsed="0.136304"/>
+</kw>
+<kw name="Enter name and email address" owner="loginPage">
+<kw name="Key Enter Username And Password" owner="CustomSeleniumLibrary">
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.158204" elapsed="0.030322"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.189094" elapsed="0.039751"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.229865" elapsed="0.060374"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.290239" elapsed="0.119469"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:36.411382" level="INFO">Typing text 'user1234' into text field '//input[@placeholder='Name']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.410818" elapsed="0.337862"/>
+</kw>
+<arg>${usr_element}</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-17T11:56:36.157187" elapsed="0.591493"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.750493" elapsed="0.028963"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.780021" elapsed="0.037254"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.817837" elapsed="0.068428"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.887261" elapsed="0.086004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:36.974915" level="INFO">Typing text 'user12344@example.com' into text field '//input[@data-qa='signup-email']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:36.973896" elapsed="0.303587"/>
+</kw>
+<arg>${password_element}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-17T11:56:36.748680" elapsed="0.529804"/>
+</kw>
+<arg>${LoginPage['New_User_Signup']['Name_txtbx']}</arg>
+<arg>${env['CRED']['USERNAME']}</arg>
+<arg>${LoginPage['New_User_Signup']['Eamil_Address_txtbx']}</arg>
+<arg>${env['CRED']['EMAIL']}</arg>
+<status status="PASS" start="2024-12-17T11:56:36.152505" elapsed="1.125979"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:36.151339" elapsed="1.127145"/>
+</kw>
+<kw name="Click 'Signup' button" owner="loginPage">
+<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:37.281477" elapsed="0.076007"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:37.358482" elapsed="0.041110"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:37.400608" level="INFO">Clicking element '//button[normalize-space()='Signup']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:37.399592" elapsed="3.526890"/>
+</kw>
+<arg>${LoginPage['New_User_Signup']['SignUp_btn']}</arg>
+<status status="PASS" start="2024-12-17T11:56:37.280479" elapsed="3.647000"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:37.279481" elapsed="3.647998"/>
+</kw>
+<kw name="Verify that 'ENTER ACCOUNT INFORMATION' is visible" owner="signupPage">
+<kw name="Key Verify That Expected Element Is Visible Successfully" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.068478" elapsed="0.095607"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:41.322088" level="INFO">Element '//b[normalize-space()='Enter Account Information']' is displayed.</msg>
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.167092" elapsed="0.155991"/>
+</kw>
+<arg>${SignupPage['Account_Information']['Heading_txt']}</arg>
+<status status="PASS" start="2024-12-17T11:56:41.042485" elapsed="0.280598"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:41.025486" elapsed="0.297597"/>
+</kw>
+<kw name="Fill details: Title, Name, Email, Password, Date of birth" owner="signupPage">
+<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.337078" elapsed="0.063008"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.401082" elapsed="0.076047"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:41.478125" level="INFO">Clicking element '(//input[@name='title'])[2]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.477129" elapsed="0.234007"/>
+</kw>
+<arg>${SignupPage['Account_Information']['radio']['Mrs']}</arg>
+<status status="PASS" start="2024-12-17T11:56:41.327086" elapsed="0.385042"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.715126" elapsed="0.046016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.761142" elapsed="0.062143"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.824289" elapsed="0.116012"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:41.941309" elapsed="0.136593"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:42.079902" level="INFO">Typing text 'pass4567' into text field '//input[@id='password']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:42.078902" elapsed="0.407400"/>
+</kw>
+<arg>${SignupPage['Account_Information']['Password_txtbx']}</arg>
+<arg>${env['CRED']['PASSWORD']}</arg>
+<status status="PASS" start="2024-12-17T11:56:41.712128" elapsed="0.774174"/>
+</kw>
+<kw name="Key Select The Label From DropDown List" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:42.489300" elapsed="0.092004"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:42.581304" elapsed="0.108569"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:42.693867" level="INFO">Selecting options from selection list 'name:days' by label 15.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-12-17T11:56:42.691871" elapsed="0.481112"/>
+</kw>
+<arg>${SignupPage['Account_Information']['Date_Of_Birth_ddbx']['Day']}</arg>
+<arg>15</arg>
+<status status="PASS" start="2024-12-17T11:56:42.487300" elapsed="0.685683"/>
+</kw>
+<kw name="Key Select The Label From DropDown List" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.175979" elapsed="0.063001"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.239977" elapsed="0.072007"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:43.313977" level="INFO">Selecting options from selection list 'name:months' by label May.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.312974" elapsed="0.237139"/>
+</kw>
+<arg>${SignupPage['Account_Information']['Date_Of_Birth_ddbx']['Month']}</arg>
+<arg>May</arg>
+<status status="PASS" start="2024-12-17T11:56:43.173986" elapsed="0.377127"/>
+</kw>
+<kw name="Key Select The Label From DropDown List" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.558109" elapsed="0.048389"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.607491" elapsed="0.062998"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:43.672488" level="INFO">Selecting options from selection list 'name:years' by label 1987.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.671490" elapsed="0.177942"/>
+</kw>
+<arg>${SignupPage['Account_Information']['Date_Of_Birth_ddbx']['Year']}</arg>
+<arg>1987</arg>
+<status status="PASS" start="2024-12-17T11:56:43.554116" elapsed="0.299316"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:41.325082" elapsed="2.529353"/>
+</kw>
+<kw name="Select checkbox 'Sign up for our newsletter!'" owner="signupPage">
+<kw name="Key Select The Checkbox" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.859425" elapsed="0.070003"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.929428" elapsed="0.058678"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:43.989103" level="INFO">Verifying checkbox '//input[@id='newsletter']' is not selected.</msg>
+<arg>${element}</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2024-12-17T11:56:43.989103" elapsed="0.058999"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:44.049098" level="INFO">Selecting checkbox '//input[@id='newsletter']'.</msg>
+<arg>${element}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.048102" elapsed="0.179200"/>
+</kw>
+<arg>${SignupPage['Account_Information']['Sign_up_for_our_newsletter_chkbx']}</arg>
+<status status="PASS" start="2024-12-17T11:56:43.857425" elapsed="0.370872"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:43.856433" elapsed="0.371864"/>
+</kw>
+<kw name="Select checkbox 'Receive special offers from our partners!'" owner="signupPage">
+<kw name="Key Select The Checkbox" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.233297" elapsed="0.042994"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.277286" elapsed="0.043012"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:44.321294" level="INFO">Verifying checkbox '//input[@id='optin']' is not selected.</msg>
+<arg>${element}</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.321294" elapsed="0.061018"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:44.383296" level="INFO">Selecting checkbox '//input[@id='optin']'.</msg>
+<arg>${element}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.383296" elapsed="0.166380"/>
+</kw>
+<arg>${SignupPage['Account_Information']['Receive_special_offers_from_our_partners']}</arg>
+<status status="PASS" start="2024-12-17T11:56:44.230296" elapsed="0.319380"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:44.229304" elapsed="0.321981"/>
+</kw>
+<kw name="Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number" owner="signupPage">
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.556058" elapsed="0.021599"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.578648" elapsed="0.028997"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.608645" elapsed="0.042268"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.651919" elapsed="0.062918"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:44.715852" level="INFO">Typing text 'cypress.io' into text field '//input[@id='first_name']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.715852" elapsed="0.254194"/>
+</kw>
+<arg>${SignupPage['Address_Information']['First_Name_txtbx']}</arg>
+<arg>cypress.io</arg>
+<status status="PASS" start="2024-12-17T11:56:44.554469" elapsed="0.415577"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.974223" elapsed="0.022582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:44.997805" elapsed="0.028003"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:45.025808" elapsed="0.041001"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:45.066809" elapsed="0.059567"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:45.127382" level="INFO">Typing text 'cypress.io' into text field '//input[@id='last_name']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:45.127382" elapsed="0.322374"/>
+</kw>
+<arg>${SignupPage['Address_Information']['Last_Name_txtbx']}</arg>
+<arg>cypress.io</arg>
+<status status="PASS" start="2024-12-17T11:56:44.972048" elapsed="0.478703"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:45.457750" elapsed="0.037505"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:45.495255" elapsed="0.048006"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:45.544270" elapsed="0.093744"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:45.639020" elapsed="0.241992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:45.882014" level="INFO">Typing text 'cypress.io' into text field '//input[@id='company']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:45.881012" elapsed="0.698414"/>
+</kw>
+<arg>${SignupPage['Address_Information']['Company_txtbx']}</arg>
+<arg>cypress.io</arg>
+<status status="PASS" start="2024-12-17T11:56:45.454751" elapsed="1.124675"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:46.582422" elapsed="0.045999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:46.629419" elapsed="0.118001"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:46.748425" elapsed="0.128563"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:46.877983" elapsed="0.201370"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:47.081358" level="INFO">Typing text 'cypress.io' into text field '//input[@id='address1']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:47.080354" elapsed="0.568512"/>
+</kw>
+<arg>${SignupPage['Address_Information']['Address_txtbx']}</arg>
+<arg>cypress.io</arg>
+<status status="PASS" start="2024-12-17T11:56:46.580425" elapsed="1.069450"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:47.657865" elapsed="0.040618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:47.699483" elapsed="0.075992"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:47.776474" elapsed="0.097009"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:47.874476" elapsed="0.156877"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:48.033363" level="INFO">Typing text 'cypress.io' into text field '//input[@id='address2']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:48.032369" elapsed="0.532720"/>
+</kw>
+<arg>${SignupPage['Address_Information']['Address2_txtbx']}</arg>
+<arg>cypress.io</arg>
+<status status="PASS" start="2024-12-17T11:56:47.649875" elapsed="0.915214"/>
+</kw>
+<kw name="Key Select The Label From DropDown List" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:48.569089" elapsed="0.135997"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:48.705086" elapsed="0.073999"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:48.780084" level="INFO">Selecting options from selection list 'name:country' by label Singapore.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-12-17T11:56:48.780084" elapsed="0.218974"/>
+</kw>
+<arg>${SignupPage['Address_Information']['Country_ddl']}</arg>
+<arg>Singapore</arg>
+<status status="PASS" start="2024-12-17T11:56:48.566084" elapsed="0.432974"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.002068" elapsed="0.037765"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.040832" elapsed="0.045287"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.087122" elapsed="0.066332"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.154456" elapsed="0.068987"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:49.224442" level="INFO">Typing text 'cypress.io' into text field '//input[@id='state']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.223443" elapsed="0.305191"/>
+</kw>
+<arg>${SignupPage['Address_Information']['State_txtbx']}</arg>
+<arg>cypress.io</arg>
+<status status="PASS" start="2024-12-17T11:56:49.000066" elapsed="0.528568"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.531615" elapsed="0.038262"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.570880" elapsed="0.041993"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.613882" elapsed="0.043989"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.657871" elapsed="0.059996"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:49.718881" level="INFO">Typing text 'cypress.io' into text field '//input[@id='city']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.717867" elapsed="0.271965"/>
+</kw>
+<arg>${SignupPage['Address_Information']['City_txtbx']}</arg>
+<arg>cypress.io</arg>
+<status status="PASS" start="2024-12-17T11:56:49.528634" elapsed="0.461198"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:49.992828" elapsed="0.023996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.017825" elapsed="0.033012"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.052844" elapsed="0.042681"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.095525" elapsed="0.068256"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:50.164775" level="INFO">Typing text '565801' into text field '//input[@id='zipcode']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.164775" elapsed="0.225929"/>
+</kw>
+<arg>${SignupPage['Address_Information']['Zipcode_txtbx']}</arg>
+<arg>565801</arg>
+<status status="PASS" start="2024-12-17T11:56:49.990834" elapsed="0.399870"/>
+</kw>
+<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.393711" elapsed="0.023997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.418702" elapsed="0.033002"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.451704" elapsed="0.046006"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.498703" elapsed="0.073586"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:50.573281" level="INFO">Typing text '9999999999' into text field '//input[@id='mobile_number']'.</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.572289" elapsed="0.267168"/>
+</kw>
+<arg>${SignupPage['Address_Information']['Mobile_txtbx']}</arg>
+<arg>9999999999</arg>
+<status status="PASS" start="2024-12-17T11:56:50.391719" elapsed="0.448756"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:44.552872" elapsed="6.287603"/>
+</kw>
+<kw name="Click 'Create Account button'" owner="signupPage">
+<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.844463" elapsed="0.047997"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.892460" elapsed="0.040991"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:50.933451" level="INFO">Clicking element '//button[normalize-space()='Create Account']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:50.933451" elapsed="2.687483"/>
+</kw>
+<arg>${SignupPage['Create_Account_btn']}</arg>
+<status status="PASS" start="2024-12-17T11:56:50.842466" elapsed="2.778468"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:50.841462" elapsed="2.780472"/>
+</kw>
+<kw name="Verify that 'ACCOUNT CREATED!' is visible" owner="accountCreatedPage">
+<kw name="Key Verify That Expected Element Is Visible Successfully" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:53.627927" elapsed="0.280993"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:53.978924" level="INFO">Element '//b[normalize-space()='Account Created!']' is displayed.</msg>
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:53.908920" elapsed="0.071014"/>
+</kw>
+<arg>${AccountCreatedPage['AccountCreated_txt']}</arg>
+<status status="PASS" start="2024-12-17T11:56:53.625923" elapsed="0.354011"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:53.624931" elapsed="0.355003"/>
+</kw>
+<kw name="Click 'Continue' button" owner="accountCreatedPage">
+<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:53.983928" elapsed="0.078016"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:54.062947" elapsed="0.085272"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:54.150214" level="INFO">Clicking element '//a[normalize-space()='Continue']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:54.149220" elapsed="4.645257"/>
+</kw>
+<arg>${AccountCreatedPage['Continue_btn']}</arg>
+<status status="PASS" start="2024-12-17T11:56:53.981928" elapsed="4.813538"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:53.980918" elapsed="4.814548"/>
+</kw>
+<kw name="Verify that 'Logged in as username' is visible" owner="homePage">
+<kw name="Key Verify That Expected Element Is Visible Successfully" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:56:58.832461" elapsed="0.070996"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:58.967450" level="INFO">Element '//ul[@class='nav navbar-nav']/li/a/b' is displayed.</msg>
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:58.904454" elapsed="0.062996"/>
+</kw>
+<arg>${HomePage['Navigation_bar']['UserName_lnk']}</arg>
+<status status="PASS" start="2024-12-17T11:56:58.823457" elapsed="0.143993"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:58.822460" elapsed="0.145991"/>
+</kw>
+<kw name="Click 'Delete Account' button" owner="homePage">
+<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:56:58.979456" elapsed="0.077632"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:56:59.058095" elapsed="0.140493"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:56:59.200584" level="INFO">Clicking element '//a[normalize-space()='Delete Account']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:56:59.199602" elapsed="2.202450"/>
+</kw>
+<arg>${HomePage['Navigation_bar']['DeleteAccount_lnk']}</arg>
+<status status="PASS" start="2024-12-17T11:56:58.971452" elapsed="2.431611"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:58.969456" elapsed="2.433607"/>
+</kw>
+<kw name="Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button" owner="deleteAccountPage">
+<kw name="Key Verify That Expected Element Is Visible Successfully" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-17T11:57:01.415058" elapsed="0.054996"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:57:01.707410" level="INFO">Element '//b[normalize-space()='Account Deleted!']' is displayed.</msg>
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:57:01.471051" elapsed="0.236359"/>
+</kw>
+<arg>${DeleteAccountPage['AccountDeleted_txt']}</arg>
+<status status="PASS" start="2024-12-17T11:57:01.413059" elapsed="0.294351"/>
+</kw>
+<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-17T11:57:01.713407" elapsed="0.068998"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-17T11:57:01.782405" elapsed="0.087769"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-17T11:57:01.871890" level="INFO">Clicking element '//a[normalize-space()='Continue']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-17T11:57:01.870905" elapsed="3.285818"/>
+</kw>
+<arg>${DeleteAccountPage['Continue_btn']}</arg>
+<status status="PASS" start="2024-12-17T11:57:01.710402" elapsed="3.447307"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:57:01.405053" elapsed="3.752656"/>
+</kw>
+<status status="PASS" start="2024-12-17T11:56:28.821858" elapsed="36.341423"/>
+</test>
+<status status="PASS" start="2024-12-17T11:56:28.254923" elapsed="36.911687"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 01 Register User">TC 01 Register User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,10 @@
+---
+Navigation_bar:
+  Home_lnk: //a[normalize-space()='Home']
+  Products_lnk:  //a[@href='/products']
+  Cart_lnk: //a[normalize-space()='Cart']
+  SignUp_Login_lnk: (//a[normalize-space()='Signup / Login'])[1]
+  DeleteAccount_lnk: //a[normalize-space()='Delete Account']
+  Logout_lnk: //a[normalize-space()='Logout']
+  UserName_lnk: //ul[@class='nav navbar-nav']/li/a/b
+  Category_txt: //h2[normalize-space()='Category']
