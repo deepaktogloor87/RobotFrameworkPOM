@@ -59,3 +59,13 @@ Key Select The Checkbox
     wait until element is enabled       ${element}
     checkbox should not be selected     ${element}
     select checkbox                     ${element}
+
+Key Upload The File
+    [Arguments]    ${element}    ${file_path}
+    wait until page contains element    ${element}
+    wait until element is visible       ${element}
+    wait until element is enabled       ${element}
+    choose file     ${element}    ${file_path}
+
+Key Handle Alert
+    handle alert    ACCEPT

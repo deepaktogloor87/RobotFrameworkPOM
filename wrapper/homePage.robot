@@ -38,3 +38,5 @@ Verify that 'Logged out successfully' is visible
 Click 'Delete Account' button
     Key Click Any Button    ${HomePage['Navigation_bar']['DeleteAccount_lnk']}
 
+Click On Contact Us button
+    Key Click Any Button    ${HomePage['Navigation_bar']['ContactUs_lnk']}

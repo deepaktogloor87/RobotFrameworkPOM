@@ -8,3 +8,4 @@ Navigation_bar:
   Logout_lnk: //a[normalize-space()='Logout']
   UserName_lnk: //ul[@class='nav navbar-nav']/li/a/b
   Category_txt: //h2[normalize-space()='Category']
+  ContactUs_lnk: //a[normalize-space()='Contact us']
