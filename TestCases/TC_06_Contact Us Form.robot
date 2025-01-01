@@ -1,9 +1,5 @@
 *** Settings ***
 Resource    ../wrapper/homePage.robot
-#Resource    ../wrapper/loginPage.robot
-#Resource    ../wrapper/signupPage.robot
-#Resource    ../wrapper/accountCreatedPage.robot
-#Resource    ../wrapper/deleteAccountPage.robot
 Resource    ../wrapper/contactusPage.robot
 
 Suite Setup    Suite Initialization
@@ -12,10 +8,6 @@ Suite Teardown    Close Browser
 *** Keywords ***
 Suite Initialization
     Initialization HomePage Variables
-#    Initialization LoginPage Variables
-#    Initialization SignUpPage Variables
-#    Initialization AccountCreatedPage Variables
-#    Initialization DeleteAccountPage Variables
     Initialization ContactUsPage Variables
 
 *** Test Cases ***

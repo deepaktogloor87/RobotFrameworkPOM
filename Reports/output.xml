@@ -1,409 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.11.3 on win32)" generated="2025-01-01T14:59:26.643575" rpa="false" schemaversion="5">
-<suite id="s1" name="TC 06 Contact Us Form" source="C:\Users\Deepak\Desktop\RobotFrameworkPOM\TestCases\TC_06_Contact Us Form.robot">
+<robot generator="Robot 7.1.1 (Python 3.11.3 on win32)" generated="2025-01-01T15:17:40.057148" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 07 Verify Test Cases Page" source="C:\Users\Deepak\Desktop\RobotFrameworkPOM\TestCases\TC_07_Verify Test Cases Page.robot">
 <kw name="Suite Initialization" type="SETUP">
 <kw name="Initialization HomePage Variables" owner="homePage">
 <kw name="Read Env File" owner="READ">
-<msg time="2025-01-01T14:59:27.279844" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x000001E59C8CBC10&gt;</msg>
+<msg time="2025-01-01T15:17:40.652122" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000021302960810&gt;</msg>
 <var>${env}</var>
 <arg>${ENV_FILE}</arg>
-<status status="PASS" start="2025-01-01T14:59:27.278281" elapsed="0.001563"/>
+<status status="PASS" start="2025-01-01T15:17:40.649122" elapsed="0.003000"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T14:59:27.281409" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x000001E59C8CBC10&gt;</msg>
+<msg time="2025-01-01T15:17:40.653127" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000021302960810&gt;</msg>
 <arg>${env}</arg>
 <arg>${env}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T14:59:27.281409" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-01T15:17:40.653127" elapsed="0.000000"/>
 </kw>
 <kw name="Read Yaml File" owner="READ">
-<msg time="2025-01-01T14:59:27.286190" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
+<msg time="2025-01-01T15:17:40.658122" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
 <var>${HomePage}</var>
 <arg>${COMMON_YAML_FILE}</arg>
-<status status="PASS" start="2025-01-01T14:59:27.281409" elapsed="0.005814"/>
+<status status="PASS" start="2025-01-01T15:17:40.654134" elapsed="0.003988"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T14:59:27.289237" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
+<msg time="2025-01-01T15:17:40.659122" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
 <arg>${HomePage}</arg>
 <arg>${HomePage}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T14:59:27.288232" elapsed="0.001993"/>
+<status status="PASS" start="2025-01-01T15:17:40.658122" elapsed="0.001000"/>
 </kw>
-<status status="PASS" start="2025-01-01T14:59:27.276709" elapsed="0.013516"/>
+<status status="PASS" start="2025-01-01T15:17:40.648122" elapsed="0.011000"/>
 </kw>
-<kw name="Initialization ContactUsPage Variables" owner="contactusPage">
-<kw name="Read Yaml File" owner="READ">
-<msg time="2025-01-01T14:59:27.300226" level="INFO">${ContactUsPage} = {'Name_txtbx': "(//input[@placeholder='Name'])[1]", 'Email_txtbx': "(//input[@placeholder='Email'])[1]", 'Subject_txtbx': "(//input[@placeholder='Subject'])[1]", 'Message_txtbx': "(//textarea[@id='mes...</msg>
-<var>${ContactUsPage}</var>
-<arg>${CONTACTUS_YAML_FILE}</arg>
-<status status="PASS" start="2025-01-01T14:59:27.292233" elapsed="0.007993"/>
+<status status="PASS" start="2025-01-01T15:17:40.647123" elapsed="0.011999"/>
 </kw>
-<kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T14:59:27.303228" level="INFO">${ContactUsPage} = {'Name_txtbx': "(//input[@placeholder='Name'])[1]", 'Email_txtbx': "(//input[@placeholder='Email'])[1]", 'Subject_txtbx': "(//input[@placeholder='Subject'])[1]", 'Message_txtbx': "(//textarea[@id='mes...</msg>
-<arg>${ContactUsPage}</arg>
-<arg>${ContactUsPage}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T14:59:27.302228" elapsed="0.001000"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:27.291230" elapsed="0.011998"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:27.276709" elapsed="0.027520"/>
-</kw>
-<test id="s1-t1" name="TC_006:Contact Us Form" line="22">
+<test id="s1-t1" name="TC_007:Verify Test Cases Page" line="13">
 <kw name="Launch browser" owner="homePage">
 <kw name="Key Launch Browser" owner="CustomSeleniumLibrary">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:27.307240" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<msg time="2025-01-01T15:17:40.661234" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
 <arg>${NONE}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-01T14:59:27.307240" elapsed="2.483182"/>
+<status status="PASS" start="2025-01-01T15:17:40.661234" elapsed="3.052767"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-01T14:59:29.791414" elapsed="0.068000"/>
+<status status="PASS" start="2025-01-01T15:17:43.715001" elapsed="0.074003"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-01-01T14:59:27.306240" elapsed="2.553174"/>
+<status status="PASS" start="2025-01-01T15:17:40.660191" elapsed="3.129811"/>
 </kw>
-<status status="PASS" start="2025-01-01T14:59:27.305243" elapsed="2.554171"/>
+<status status="PASS" start="2025-01-01T15:17:40.660191" elapsed="3.129811"/>
 </kw>
 <kw name="Navigate to url 'http://automationexercise.com'" owner="homePage">
 <kw name="Key Navigate To Url" owner="CustomSeleniumLibrary">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:29.863423" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<msg time="2025-01-01T15:17:43.793005" level="INFO">Opening url 'http://automationexercise.com'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-01-01T14:59:29.863423" elapsed="3.810019"/>
+<status status="PASS" start="2025-01-01T15:17:43.793005" elapsed="4.168833"/>
 </kw>
 <arg>${env['BASIC']['URL']}</arg>
-<status status="PASS" start="2025-01-01T14:59:29.861414" elapsed="3.812028"/>
+<status status="PASS" start="2025-01-01T15:17:43.791004" elapsed="4.170834"/>
 </kw>
-<status status="PASS" start="2025-01-01T14:59:29.860414" elapsed="3.813028"/>
+<status status="PASS" start="2025-01-01T15:17:43.791004" elapsed="4.170834"/>
 </kw>
 <kw name="Verify that home page is visible successfully" owner="homePage">
 <kw name="Key Verify That Expected Element Is Visible Successfully" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:33.678444" elapsed="0.042903"/>
+<status status="PASS" start="2025-01-01T15:17:47.977504" elapsed="0.099995"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:33.784463" level="INFO">Element '//a[normalize-space()='Home']' is displayed.</msg>
+<msg time="2025-01-01T15:17:48.198513" level="INFO">Element '//a[normalize-space()='Home']' is displayed.</msg>
 <arg>${element}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:33.721347" elapsed="0.063116"/>
+<status status="PASS" start="2025-01-01T15:17:48.078492" elapsed="0.120563"/>
 </kw>
 <arg>${HomePage['Navigation_bar']['Home_lnk']}</arg>
-<status status="PASS" start="2025-01-01T14:59:33.676443" elapsed="0.109023"/>
+<status status="PASS" start="2025-01-01T15:17:47.974513" elapsed="0.224542"/>
 </kw>
-<status status="PASS" start="2025-01-01T14:59:33.674446" elapsed="0.111020"/>
+<status status="PASS" start="2025-01-01T15:17:47.973506" elapsed="0.225549"/>
 </kw>
-<kw name="Click On Contact Us button" owner="homePage">
+<kw name="Click on 'Test Cases' button" owner="testcasesPage">
 <kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:33.789464" elapsed="0.099009"/>
+<status status="PASS" start="2025-01-01T15:17:48.204054" elapsed="0.077005"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T14:59:33.888473" elapsed="0.103989"/>
+<status status="PASS" start="2025-01-01T15:17:48.282054" elapsed="0.223937"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:33.994462" level="INFO">Clicking element '//a[normalize-space()='Contact us']'.</msg>
+<msg time="2025-01-01T15:17:48.507995" level="INFO">Clicking element '(//a[normalize-space()='Test Cases'])[1]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:33.993458" elapsed="2.253782"/>
+<status status="PASS" start="2025-01-01T15:17:48.506988" elapsed="4.025495"/>
 </kw>
-<arg>${HomePage['Navigation_bar']['ContactUs_lnk']}</arg>
-<status status="PASS" start="2025-01-01T14:59:33.787464" elapsed="2.460784"/>
+<arg>${HomePage['Navigation_bar']['TestCases_lnk']}</arg>
+<status status="PASS" start="2025-01-01T15:17:48.201060" elapsed="4.332429"/>
 </kw>
-<status status="PASS" start="2025-01-01T14:59:33.786463" elapsed="2.461785"/>
+<status status="PASS" start="2025-01-01T15:17:48.200053" elapsed="4.334432"/>
 </kw>
-<kw name="Verify 'Get In Touch' is visible" owner="contactusPage">
+<kw name="Verify user is navigated to test cases page successfully" owner="testcasesPage">
 <kw name="Key Verify Expected Text Is Visible" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:36.253244" elapsed="0.398997"/>
+<status status="PASS" start="2025-01-01T15:17:52.579484" elapsed="0.085005"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:36.992447" level="INFO">Current page contains text 'Get In Touch'.</msg>
+<msg time="2025-01-01T15:17:52.816137" level="INFO">Current page contains text 'Test Cases'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-01-01T14:59:36.652241" elapsed="0.340206"/>
+<status status="PASS" start="2025-01-01T15:17:52.665488" elapsed="0.150649"/>
 </kw>
-<arg>Get In Touch</arg>
-<status status="PASS" start="2025-01-01T14:59:36.251242" elapsed="0.742213"/>
+<arg>Test Cases</arg>
+<status status="PASS" start="2025-01-01T15:17:52.573487" elapsed="0.242650"/>
 </kw>
-<status status="PASS" start="2025-01-01T14:59:36.250245" elapsed="0.743210"/>
+<status status="PASS" start="2025-01-01T15:17:52.545488" elapsed="0.270649"/>
 </kw>
-<kw name="Enter name, email, subject and message" owner="contactusPage">
-<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:36.997451" elapsed="0.133996"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:37.132452" elapsed="0.051994"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T14:59:37.185449" elapsed="0.064281"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:37.249730" elapsed="0.169004"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:37.419731" level="INFO">Typing text 'cypress.io' into text field '(//input[@placeholder='Name'])[1]'.</msg>
-<arg>${element}</arg>
-<arg>${text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:37.418734" elapsed="0.482876"/>
-</kw>
-<arg>${ContactUsPage['Name_txtbx']}</arg>
-<arg>cypress.io</arg>
-<status status="PASS" start="2025-01-01T14:59:36.995462" elapsed="0.907147"/>
-</kw>
-<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:37.905603" elapsed="0.097007"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.002610" elapsed="0.041995"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.045600" elapsed="0.051998"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.097598" elapsed="0.086000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:38.184599" level="INFO">Typing text 'cypress@io.com' into text field '(//input[@placeholder='Email'])[1]'.</msg>
-<arg>${element}</arg>
-<arg>${text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.183598" elapsed="0.294800"/>
-</kw>
-<arg>${ContactUsPage['Email_txtbx']}</arg>
-<arg>cypress@io.com</arg>
-<status status="PASS" start="2025-01-01T14:59:37.903611" elapsed="0.574787"/>
-</kw>
-<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.484388" elapsed="0.024001"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.509382" elapsed="0.029008"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.539390" elapsed="0.043003"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.583391" elapsed="0.078922"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:38.663308" level="INFO">Typing text 'cypress.io' into text field '(//input[@placeholder='Subject'])[1]'.</msg>
-<arg>${element}</arg>
-<arg>${text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.662313" elapsed="0.299396"/>
-</kw>
-<arg>${ContactUsPage['Subject_txtbx']}</arg>
-<arg>cypress.io</arg>
-<status status="PASS" start="2025-01-01T14:59:38.479400" elapsed="0.483302"/>
-</kw>
-<kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.968704" elapsed="0.027480"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:38.996184" elapsed="0.036029"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.032213" elapsed="0.051996"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.084209" elapsed="0.080997"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:39.166209" level="INFO">Typing text 'This is custom test message' into text field '(//textarea[@id='message'])[1]'.</msg>
-<arg>${element}</arg>
-<arg>${text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.166209" elapsed="0.405786"/>
-</kw>
-<arg>${ContactUsPage['Message_txtbx']}</arg>
-<arg>This is custom test message</arg>
-<status status="PASS" start="2025-01-01T14:59:38.963701" elapsed="0.608294"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:36.994447" elapsed="2.577548"/>
-</kw>
-<kw name="Upload file" owner="contactusPage">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${log_file_path}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.574987" elapsed="0.001000"/>
-</kw>
-<kw name="Key Upload The File" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.579982" elapsed="0.031013"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.610995" elapsed="0.038985"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.650985" elapsed="0.044584"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:39.695569" level="INFO">Sending C:\Users\Deepak\Desktop\RobotFrameworkPOM\Reports\log.html to browser.</msg>
-<arg>${element}</arg>
-<arg>${file_path}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.695569" elapsed="0.065268"/>
-</kw>
-<arg>${ContactUsPage['ChooseFile_btn']}</arg>
-<arg>${log_file_path}</arg>
-<status status="PASS" start="2025-01-01T14:59:39.576986" elapsed="0.183851"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:39.573985" elapsed="0.187856"/>
-</kw>
-<kw name="Click Submit button" owner="contactusPage">
-<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.766998" elapsed="0.044122"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.811120" elapsed="0.050505"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:39.862625" level="INFO">Clicking element '//input[@value='Submit']'.</msg>
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:39.861625" elapsed="0.176603"/>
-</kw>
-<arg>${ContactUsPage['Submit_btn']}</arg>
-<status status="PASS" start="2025-01-01T14:59:39.764978" elapsed="0.274249"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:39.763791" elapsed="0.275436"/>
-</kw>
-<kw name="Click OK button" owner="contactusPage">
-<kw name="Key Handle Alert" owner="CustomSeleniumLibrary">
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:40.042226" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<arg>ACCEPT</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-01-01T14:59:40.041233" elapsed="0.046996"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:40.041233" elapsed="0.046996"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:40.040230" elapsed="0.047999"/>
-</kw>
-<kw name="Verify success message 'Success! Your details have been submitted successfully.' is visible" owner="contactusPage">
-<kw name="Key Verify Expected Text Is Visible" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${text}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:40.103229" elapsed="0.050804"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:40.187029" level="INFO">Current page contains text 'Success! Your details have been submitted successfully'.</msg>
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-01-01T14:59:40.155032" elapsed="0.032989"/>
-</kw>
-<arg>Success! Your details have been submitted successfully</arg>
-<status status="PASS" start="2025-01-01T14:59:40.096238" elapsed="0.091783"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:40.095230" elapsed="0.092791"/>
-</kw>
-<kw name="Click 'Home' button and verify that landed to home page successfully" owner="contactusPage">
-<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T14:59:40.192020" elapsed="0.138571"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T14:59:40.330591" elapsed="0.056358"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:40.387948" level="INFO">Clicking element '(//span[normalize-space()='Home'])[1]'.</msg>
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T14:59:40.386949" elapsed="0.193877"/>
-</kw>
-<arg>${ContactUsPage['Home_btn']}</arg>
-<status status="PASS" start="2025-01-01T14:59:40.190037" elapsed="0.392794"/>
-</kw>
-<kw name="Key Verify Expected Text Is Visible" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${text}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T14:59:40.600837" elapsed="5.610845"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-01T14:59:46.863564" level="INFO">Current page contains text 'Full-Fledged practice website for Automation Engineers'.</msg>
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-01-01T14:59:46.212688" elapsed="0.650876"/>
-</kw>
-<arg>Full-Fledged practice website for Automation Engineers</arg>
-<status status="PASS" start="2025-01-01T14:59:40.582831" elapsed="6.280733"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:40.189027" elapsed="6.675536"/>
-</kw>
-<status status="PASS" start="2025-01-01T14:59:27.304229" elapsed="19.561330"/>
+<status status="PASS" start="2025-01-01T15:17:40.659122" elapsed="12.172007"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-01T14:59:46.868556" elapsed="5.399827"/>
+<status status="PASS" start="2025-01-01T15:17:52.835131" elapsed="2.961459"/>
 </kw>
-<status status="PASS" start="2025-01-01T14:59:26.647907" elapsed="25.621487"/>
+<status status="PASS" start="2025-01-01T15:17:40.061724" elapsed="15.734866"/>
 </suite>
 <statistics>
 <total>
@@ -412,7 +139,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC 06 Contact Us Form">TC 06 Contact Us Form</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 07 Verify Test Cases Page">TC 07 Verify Test Cases Page</stat>
 </suite>
 </statistics>
 <errors>
