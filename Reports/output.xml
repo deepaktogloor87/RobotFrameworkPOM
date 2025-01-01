@@ -1,337 +1,360 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.11.3 on win32)" generated="2025-01-01T12:44:02.978626" rpa="false" schemaversion="5">
-<suite id="s1" name="TC 03 Login User with incorrect email and password" source="C:\Users\Deepak\Desktop\RobotFrameworkPOM\TestCases\TC_03_Login User with incorrect email and password.robot">
+<robot generator="Robot 7.1.1 (Python 3.11.3 on win32)" generated="2025-01-01T13:02:13.132843" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 04 Logout User" source="C:\Users\Deepak\Desktop\RobotFrameworkPOM\TestCases\TC_04_Logout User.robot">
 <kw name="Suite Initialization" type="SETUP">
 <kw name="Initialization HomePage Variables" owner="homePage">
 <kw name="Read Env File" owner="READ">
-<msg time="2025-01-01T12:44:03.603302" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x000001DF84DFBBD0&gt;</msg>
+<msg time="2025-01-01T13:02:13.485279" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000019BDDFDBB50&gt;</msg>
 <var>${env}</var>
 <arg>${ENV_FILE}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.602300" elapsed="0.001002"/>
+<status status="PASS" start="2025-01-01T13:02:13.484278" elapsed="0.001001"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T12:44:03.604303" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x000001DF84DFBBD0&gt;</msg>
+<msg time="2025-01-01T13:02:13.485279" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000019BDDFDBB50&gt;</msg>
 <arg>${env}</arg>
 <arg>${env}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.604303" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-01T13:02:13.485279" elapsed="0.000000"/>
 </kw>
 <kw name="Read Yaml File" owner="READ">
-<msg time="2025-01-01T12:44:03.607299" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
+<msg time="2025-01-01T13:02:13.487277" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
 <var>${HomePage}</var>
 <arg>${COMMON_YAML_FILE}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.605300" elapsed="0.001999"/>
+<status status="PASS" start="2025-01-01T13:02:13.485279" elapsed="0.001998"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T12:44:03.610308" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
+<msg time="2025-01-01T13:02:13.488278" level="INFO">${HomePage} = {'Navigation_bar': {'Home_lnk': "//a[normalize-space()='Home']", 'Products_lnk': "//a[@href='/products']", 'Cart_lnk': "//a[normalize-space()='Cart']", 'SignUp_Login_lnk': "(//a[normalize-space()='Sig...</msg>
 <arg>${HomePage}</arg>
 <arg>${HomePage}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.608302" elapsed="0.002006"/>
+<status status="PASS" start="2025-01-01T13:02:13.488278" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:03.601304" elapsed="0.009004"/>
+<status status="PASS" start="2025-01-01T13:02:13.482280" elapsed="0.005998"/>
 </kw>
 <kw name="Initialization LoginPage Variables" owner="loginPage">
 <kw name="Read Env File" owner="READ">
-<msg time="2025-01-01T12:44:03.612303" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x000001DF84E02590&gt;</msg>
+<msg time="2025-01-01T13:02:13.489276" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000019BDDFE2650&gt;</msg>
 <var>${env}</var>
 <arg>${ENV_FILE}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.611305" elapsed="0.002003"/>
+<status status="PASS" start="2025-01-01T13:02:13.489276" elapsed="0.000000"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T12:44:03.613308" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x000001DF84E02590&gt;</msg>
+<msg time="2025-01-01T13:02:13.490280" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000019BDDFE2650&gt;</msg>
 <arg>${env}</arg>
 <arg>${env}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.613308" elapsed="0.000991"/>
+<status status="PASS" start="2025-01-01T13:02:13.489276" elapsed="0.001004"/>
 </kw>
 <kw name="Read Yaml File" owner="READ">
-<msg time="2025-01-01T12:44:03.616294" level="INFO">${LoginPage} = {'New_User_Signup': {'Name_txtbx': "//input[@placeholder='Name']", 'Eamil_Address_txtbx': "//input[@data-qa='signup-email']", 'SignUp_btn': "//button[normalize-space()='Signup']"}, 'Login_to_your_acco...</msg>
+<msg time="2025-01-01T13:02:13.491280" level="INFO">${LoginPage} = {'New_User_Signup': {'Name_txtbx': "//input[@placeholder='Name']", 'Eamil_Address_txtbx': "//input[@data-qa='signup-email']", 'SignUp_btn': "//button[normalize-space()='Signup']"}, 'Login_to_your_acco...</msg>
 <var>${LoginPage}</var>
 <arg>${LOGIN_YAML_FILE}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.614299" elapsed="0.001995"/>
+<status status="PASS" start="2025-01-01T13:02:13.490280" elapsed="0.001000"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T12:44:03.617301" level="INFO">${LoginPage} = {'New_User_Signup': {'Name_txtbx': "//input[@placeholder='Name']", 'Eamil_Address_txtbx': "//input[@data-qa='signup-email']", 'SignUp_btn': "//button[normalize-space()='Signup']"}, 'Login_to_your_acco...</msg>
+<msg time="2025-01-01T13:02:13.492279" level="INFO">${LoginPage} = {'New_User_Signup': {'Name_txtbx': "//input[@placeholder='Name']", 'Eamil_Address_txtbx': "//input[@data-qa='signup-email']", 'SignUp_btn': "//button[normalize-space()='Signup']"}, 'Login_to_your_acco...</msg>
 <arg>${LoginPage}</arg>
 <arg>${LoginPage}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.616294" elapsed="0.001007"/>
+<status status="PASS" start="2025-01-01T13:02:13.491280" elapsed="0.000999"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:03.611305" elapsed="0.005996"/>
+<status status="PASS" start="2025-01-01T13:02:13.488278" elapsed="0.004001"/>
 </kw>
 <kw name="Initialization SignUpPage Variables" owner="signupPage">
 <kw name="Read Env File" owner="READ">
-<msg time="2025-01-01T12:44:03.618297" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x000001DF84E091D0&gt;</msg>
+<msg time="2025-01-01T13:02:13.493280" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000019BDDFE5490&gt;</msg>
 <var>${env}</var>
 <arg>${ENV_FILE}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.617301" elapsed="0.000996"/>
+<status status="PASS" start="2025-01-01T13:02:13.492279" elapsed="0.001001"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T12:44:03.619304" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x000001DF84E091D0&gt;</msg>
+<msg time="2025-01-01T13:02:13.493280" level="INFO">${env} = &lt;configparser.ConfigParser object at 0x0000019BDDFE5490&gt;</msg>
 <arg>${env}</arg>
 <arg>${env}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.618297" elapsed="0.001007"/>
+<status status="PASS" start="2025-01-01T13:02:13.493280" elapsed="0.000000"/>
 </kw>
 <kw name="Read Yaml File" owner="READ">
-<msg time="2025-01-01T12:44:03.623297" level="INFO">${SignupPage} = {'Account_Information': {'Heading_txt': "//b[normalize-space()='Enter Account Information']", 'radio': {'Mr': "(//input[@name='title'])[1]", 'Mrs': "(//input[@name='title'])[2]"}, 'Name_txtbx': "//inp...</msg>
+<msg time="2025-01-01T13:02:13.497277" level="INFO">${SignupPage} = {'Account_Information': {'Heading_txt': "//b[normalize-space()='Enter Account Information']", 'radio': {'Mr': "(//input[@name='title'])[1]", 'Mrs': "(//input[@name='title'])[2]"}, 'Name_txtbx': "//inp...</msg>
 <var>${SignupPage}</var>
 <arg>${SIGNUP_YAML_FILE}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.619304" elapsed="0.003993"/>
+<status status="PASS" start="2025-01-01T13:02:13.493280" elapsed="0.003997"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T12:44:03.624301" level="INFO">${SignupPage} = {'Account_Information': {'Heading_txt': "//b[normalize-space()='Enter Account Information']", 'radio': {'Mr': "(//input[@name='title'])[1]", 'Mrs': "(//input[@name='title'])[2]"}, 'Name_txtbx': "//inp...</msg>
+<msg time="2025-01-01T13:02:13.497277" level="INFO">${SignupPage} = {'Account_Information': {'Heading_txt': "//b[normalize-space()='Enter Account Information']", 'radio': {'Mr': "(//input[@name='title'])[1]", 'Mrs': "(//input[@name='title'])[2]"}, 'Name_txtbx': "//inp...</msg>
 <arg>${SignupPage}</arg>
 <arg>${SignupPage}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.624301" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-01T13:02:13.497277" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:03.617301" elapsed="0.008008"/>
+<status status="PASS" start="2025-01-01T13:02:13.492279" elapsed="0.004998"/>
 </kw>
 <kw name="Initialization AccountCreatedPage Variables" owner="accountCreatedPage">
 <kw name="Read Yaml File" owner="READ">
-<msg time="2025-01-01T12:44:03.627305" level="INFO">${AccountCreatedPage} = {'AccountCreated_txt': "//b[normalize-space()='Account Created!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
+<msg time="2025-01-01T13:02:13.498279" level="INFO">${AccountCreatedPage} = {'AccountCreated_txt': "//b[normalize-space()='Account Created!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
 <var>${AccountCreatedPage}</var>
 <arg>${ACCOUNTCREATED_YAML_FILE}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.625309" elapsed="0.001996"/>
+<status status="PASS" start="2025-01-01T13:02:13.498279" elapsed="0.000000"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T12:44:03.628301" level="INFO">${AccountCreatedPage} = {'AccountCreated_txt': "//b[normalize-space()='Account Created!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
+<msg time="2025-01-01T13:02:13.500291" level="INFO">${AccountCreatedPage} = {'AccountCreated_txt': "//b[normalize-space()='Account Created!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
 <arg>${AccountCreatedPage}</arg>
 <arg>${AccountCreatedPage}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.627305" elapsed="0.000996"/>
+<status status="PASS" start="2025-01-01T13:02:13.499282" elapsed="0.001009"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:03.625309" elapsed="0.002992"/>
+<status status="PASS" start="2025-01-01T13:02:13.497277" elapsed="0.003014"/>
 </kw>
 <kw name="Initialization DeleteAccountPage Variables" owner="deleteAccountPage">
 <kw name="Read Yaml File" owner="READ">
-<msg time="2025-01-01T12:44:03.630301" level="INFO">${DeleteAccountPage} = {'AccountDeleted_txt': "//b[normalize-space()='Account Deleted!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
+<msg time="2025-01-01T13:02:13.503281" level="INFO">${DeleteAccountPage} = {'AccountDeleted_txt': "//b[normalize-space()='Account Deleted!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
 <var>${DeleteAccountPage}</var>
 <arg>${DELETEACCOUNT_YAML_FILE}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.629304" elapsed="0.000997"/>
+<status status="PASS" start="2025-01-01T13:02:13.501281" elapsed="0.002000"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-01-01T12:44:03.631303" level="INFO">${DeleteAccountPage} = {'AccountDeleted_txt': "//b[normalize-space()='Account Deleted!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
+<msg time="2025-01-01T13:02:13.503281" level="INFO">${DeleteAccountPage} = {'AccountDeleted_txt': "//b[normalize-space()='Account Deleted!']", 'Continue_btn': "//a[normalize-space()='Continue']"}</msg>
 <arg>${DeleteAccountPage}</arg>
 <arg>${DeleteAccountPage}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.630301" elapsed="0.001002"/>
+<status status="PASS" start="2025-01-01T13:02:13.503281" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:03.628301" elapsed="0.003002"/>
+<status status="PASS" start="2025-01-01T13:02:13.501281" elapsed="0.003002"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:03.599302" elapsed="0.032001"/>
+<status status="PASS" start="2025-01-01T13:02:13.482280" elapsed="0.022003"/>
 </kw>
-<test id="s1-t1" name="TC_003:Login User with incorrect email and incorrect password" line="19">
+<test id="s1-t1" name="TC_004:Logout User" line="19">
 <kw name="Launch browser" owner="homePage">
 <kw name="Key Launch Browser" owner="CustomSeleniumLibrary">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:03.633306" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<msg time="2025-01-01T13:02:13.505276" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
 <arg>${NONE}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-01T12:44:03.633306" elapsed="3.602003"/>
+<status status="PASS" start="2025-01-01T13:02:13.505276" elapsed="2.464780"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-01T12:44:07.236305" elapsed="0.114004"/>
+<status status="PASS" start="2025-01-01T13:02:15.970056" elapsed="0.145002"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-01-01T12:44:03.632305" elapsed="3.718004"/>
+<status status="PASS" start="2025-01-01T13:02:13.505276" elapsed="2.610783"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:03.632305" elapsed="3.718004"/>
+<status status="PASS" start="2025-01-01T13:02:13.504283" elapsed="2.611776"/>
 </kw>
 <kw name="Navigate to url 'http://automationexercise.com'" owner="homePage">
 <kw name="Key Navigate To Url" owner="CustomSeleniumLibrary">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:07.356311" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<msg time="2025-01-01T13:02:16.120054" level="INFO">Opening url 'http://automationexercise.com'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-01-01T12:44:07.355307" elapsed="3.649342"/>
+<status status="PASS" start="2025-01-01T13:02:16.119056" elapsed="3.554789"/>
 </kw>
 <arg>${env['BASIC']['URL']}</arg>
-<status status="PASS" start="2025-01-01T12:44:07.354312" elapsed="3.651335"/>
+<status status="PASS" start="2025-01-01T13:02:16.118054" elapsed="3.555791"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:07.353306" elapsed="3.652341"/>
+<status status="PASS" start="2025-01-01T13:02:16.117059" elapsed="3.557785"/>
 </kw>
 <kw name="Verify that home page is visible successfully" owner="homePage">
 <kw name="Key Verify That Expected Element Is Visible Successfully" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T12:44:11.006647" elapsed="0.030998"/>
+<status status="PASS" start="2025-01-01T13:02:19.676846" elapsed="0.041453"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:11.088645" level="INFO">Element '//a[normalize-space()='Home']' is displayed.</msg>
+<msg time="2025-01-01T13:02:19.745301" level="INFO">Element '//a[normalize-space()='Home']' is displayed.</msg>
 <arg>${element}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T12:44:11.037645" elapsed="0.052000"/>
+<status status="PASS" start="2025-01-01T13:02:19.718299" elapsed="0.027002"/>
 </kw>
 <arg>${HomePage['Navigation_bar']['Home_lnk']}</arg>
-<status status="PASS" start="2025-01-01T12:44:11.006647" elapsed="0.082998"/>
+<status status="PASS" start="2025-01-01T13:02:19.675849" elapsed="0.069452"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:11.005647" elapsed="0.083998"/>
+<status status="PASS" start="2025-01-01T13:02:19.674844" elapsed="0.070457"/>
 </kw>
 <kw name="Click on 'Signup / Login' button" owner="homePage">
 <kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T12:44:11.091648" elapsed="0.042997"/>
+<status status="PASS" start="2025-01-01T13:02:19.748299" elapsed="0.042999"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T12:44:11.134645" elapsed="0.044018"/>
+<status status="PASS" start="2025-01-01T13:02:19.791298" elapsed="0.049004"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:11.179665" level="INFO">Clicking element '(//a[normalize-space()='Signup / Login'])[1]'.</msg>
+<msg time="2025-01-01T13:02:19.841298" level="INFO">Clicking element '(//a[normalize-space()='Signup / Login'])[1]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T12:44:11.178663" elapsed="1.844801"/>
+<status status="PASS" start="2025-01-01T13:02:19.841298" elapsed="1.108060"/>
 </kw>
 <arg>${HomePage['Navigation_bar']['SignUp_Login_lnk']}</arg>
-<status status="PASS" start="2025-01-01T12:44:11.090650" elapsed="1.932814"/>
+<status status="PASS" start="2025-01-01T13:02:19.747302" elapsed="1.202056"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:11.089645" elapsed="1.934826"/>
+<status status="PASS" start="2025-01-01T13:02:19.746295" elapsed="1.203063"/>
 </kw>
 <kw name="Verify 'Login to your account' is visible" owner="loginPage">
 <kw name="Key Verify Expected Text Is Visible" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.026464" elapsed="0.025004"/>
+<status status="PASS" start="2025-01-01T13:02:20.951370" elapsed="0.027988"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:13.071466" level="INFO">Current page contains text 'Login to your account'.</msg>
+<msg time="2025-01-01T13:02:21.012361" level="INFO">Current page contains text 'Login to your account'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.052463" elapsed="0.019003"/>
+<status status="PASS" start="2025-01-01T13:02:20.980360" elapsed="0.032001"/>
 </kw>
 <arg>Login to your account</arg>
-<status status="PASS" start="2025-01-01T12:44:13.025466" elapsed="0.046000"/>
+<status status="PASS" start="2025-01-01T13:02:20.951370" elapsed="0.061989"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:13.024471" elapsed="0.046995"/>
+<status status="PASS" start="2025-01-01T13:02:20.950359" elapsed="0.064005"/>
 </kw>
-<kw name="Enter incorrect email address and incorrect password" owner="loginPage">
+<kw name="Enter correct email address and password" owner="loginPage">
 <kw name="Key Enter Username And Password" owner="CustomSeleniumLibrary">
 <kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.075460" elapsed="0.026008"/>
+<status status="PASS" start="2025-01-01T13:02:21.026359" elapsed="0.042003"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.101468" elapsed="0.217349"/>
+<status status="PASS" start="2025-01-01T13:02:21.069359" elapsed="0.595821"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.318817" elapsed="0.065297"/>
+<status status="PASS" start="2025-01-01T13:02:21.666187" elapsed="0.141545"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.384114" elapsed="0.074000"/>
+<status status="PASS" start="2025-01-01T13:02:21.807732" elapsed="0.149594"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:13.459118" level="INFO">Typing text 'user1234554@example.com' into text field '//input[@data-qa='login-email']'.</msg>
+<msg time="2025-01-01T13:02:21.958329" level="INFO">Typing text 'user12344@example.com' into text field '//input[@data-qa='login-email']'.</msg>
 <arg>${element}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.458114" elapsed="0.340123"/>
+<status status="PASS" start="2025-01-01T13:02:21.958329" elapsed="0.333998"/>
 </kw>
 <arg>${usr_element}</arg>
 <arg>${username}</arg>
-<status status="PASS" start="2025-01-01T12:44:13.074458" elapsed="0.723779"/>
+<status status="PASS" start="2025-01-01T13:02:21.025357" elapsed="1.266970"/>
 </kw>
 <kw name="Key Input Text Into Text Field" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.800237" elapsed="0.017001"/>
+<status status="PASS" start="2025-01-01T13:02:22.293328" elapsed="0.023997"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.818239" elapsed="0.018997"/>
+<status status="PASS" start="2025-01-01T13:02:22.317325" elapsed="0.026002"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.837236" elapsed="0.029002"/>
+<status status="PASS" start="2025-01-01T13:02:22.343327" elapsed="0.044016"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.866238" elapsed="0.046002"/>
+<status status="PASS" start="2025-01-01T13:02:22.387343" elapsed="0.072528"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:13.913237" level="INFO">Typing text 'pass456799' into text field '//input[@placeholder='Password']'.</msg>
+<msg time="2025-01-01T13:02:22.460870" level="INFO">Typing text 'pass4567' into text field '//input[@placeholder='Password']'.</msg>
 <arg>${element}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T12:44:13.913237" elapsed="0.177003"/>
+<status status="PASS" start="2025-01-01T13:02:22.459871" elapsed="0.174002"/>
 </kw>
 <arg>${password_element}</arg>
 <arg>${password}</arg>
-<status status="PASS" start="2025-01-01T12:44:13.799238" elapsed="0.291002"/>
+<status status="PASS" start="2025-01-01T13:02:22.292327" elapsed="0.341546"/>
 </kw>
 <arg>${LoginPage['Login_to_your_account']['Email_Address_txtbx']}</arg>
-<arg>${env['CRED']['IN_EMAIL']}</arg>
+<arg>${env['CRED']['EMAIL']}</arg>
 <arg>${LoginPage['Login_to_your_account']['Password_txtbx']}</arg>
-<arg>${env['CRED']['IN_PASSWORD']}</arg>
-<status status="PASS" start="2025-01-01T12:44:13.072467" elapsed="1.017773"/>
+<arg>${env['CRED']['PASSWORD']}</arg>
+<status status="PASS" start="2025-01-01T13:02:21.020361" elapsed="1.613512"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:13.072467" elapsed="1.018775"/>
+<status status="PASS" start="2025-01-01T13:02:21.017359" elapsed="1.617523"/>
 </kw>
 <kw name="Click 'Login' button" owner="loginPage">
 <kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-01T12:44:14.092243" elapsed="0.049994"/>
+<status status="PASS" start="2025-01-01T13:02:22.635872" elapsed="0.052011"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-01T12:44:14.143239" elapsed="0.024999"/>
+<status status="PASS" start="2025-01-01T13:02:22.688880" elapsed="0.033172"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:14.169232" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
+<msg time="2025-01-01T13:02:22.722052" level="INFO">Clicking element '//button[normalize-space()='Login']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-01T12:44:14.168238" elapsed="1.904096"/>
+<status status="PASS" start="2025-01-01T13:02:22.722052" elapsed="2.857319"/>
 </kw>
 <arg>${LoginPage['Login_to_your_account']['Login_btn']}</arg>
-<status status="PASS" start="2025-01-01T12:44:14.091242" elapsed="1.981092"/>
+<status status="PASS" start="2025-01-01T13:02:22.634882" elapsed="2.944489"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:14.091242" elapsed="1.981092"/>
+<status status="PASS" start="2025-01-01T13:02:22.634882" elapsed="2.944489"/>
 </kw>
-<kw name="Verify Your email or password is incorrect! message is visible" owner="loginPage">
-<kw name="Key Verify Expected Text Is Visible" owner="CustomSeleniumLibrary">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${text}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-01T12:44:16.074341" elapsed="0.017993"/>
+<kw name="Verify that 'Logged in as username' is visible" owner="homePage">
+<kw name="Key Verify That Expected Element Is Visible Successfully" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-01T13:02:25.585372" elapsed="0.028997"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-01T12:44:16.107333" level="INFO">Current page contains text 'Your email or password is incorrect!'.</msg>
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-01-01T12:44:16.092334" elapsed="0.014999"/>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-01T13:02:25.646371" level="INFO">Element '//ul[@class='nav navbar-nav']/li/a/b' is displayed.</msg>
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-01T13:02:25.614369" elapsed="0.032002"/>
 </kw>
-<arg>Your email or password is incorrect!</arg>
-<status status="PASS" start="2025-01-01T12:44:16.073336" elapsed="0.035011"/>
+<arg>${HomePage['Navigation_bar']['UserName_lnk']}</arg>
+<status status="PASS" start="2025-01-01T13:02:25.581373" elapsed="0.064998"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:16.073336" elapsed="0.035011"/>
+<status status="PASS" start="2025-01-01T13:02:25.580371" elapsed="0.066000"/>
 </kw>
-<status status="PASS" start="2025-01-01T12:44:03.631303" elapsed="12.477044"/>
+<kw name="Click on 'Logout' button" owner="homePage">
+<kw name="Key Click Any Button" owner="CustomSeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-01T13:02:25.651376" elapsed="0.097661"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-01T13:02:25.750039" elapsed="0.055002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-01T13:02:25.805041" level="INFO">Clicking element '//a[normalize-space()='Logout']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-01T13:02:25.805041" elapsed="1.520603"/>
+</kw>
+<arg>${HomePage['Navigation_bar']['Logout_lnk']}</arg>
+<status status="PASS" start="2025-01-01T13:02:25.647369" elapsed="1.678275"/>
+</kw>
+<status status="PASS" start="2025-01-01T13:02:25.647369" elapsed="1.678275"/>
+</kw>
+<status status="PASS" start="2025-01-01T13:02:13.504283" elapsed="13.822361"/>
 </test>
-<status status="PASS" start="2025-01-01T12:44:02.982727" elapsed="13.126620"/>
+<status status="PASS" start="2025-01-01T13:02:13.135496" elapsed="14.192150"/>
 </suite>
 <statistics>
 <total>
@@ -340,7 +363,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC 03 Login User with incorrect email and password">TC 03 Login User with incorrect email and password</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 04 Logout User">TC 04 Logout User</stat>
 </suite>
 </statistics>
 <errors>
