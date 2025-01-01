@@ -27,6 +27,11 @@ Click 'Signup' button
 Verify 'Login to your account' is visible
     Key Verify Expected Text Is Visible    Login to your account
 
+Enter name and already registered email address
+    Key Enter Username And Password
+    ...     ${LoginPage['New_User_Signup']['Name_txtbx']}               ${env['CRED']['USERNAME']}
+    ...     ${LoginPage['New_User_Signup']['Eamil_Address_txtbx']}      ${env['CRED']['EMAIL']}
+
 Enter correct email address and password
     Key Enter Username And Password
     ...     ${LoginPage['Login_to_your_account']['Email_Address_txtbx']}               ${env['CRED']['EMAIL']}
@@ -39,6 +44,9 @@ Enter incorrect email address and incorrect password
 
 Verify Your email or password is incorrect! message is visible
     Key Verify Expected Text Is Visible    Your email or password is incorrect!
+
+Verify error 'Email Address already exist!' is visible
+    Key Verify Expected Text Is Visible    Email Address already exist!
 
 Click 'Login' button
     Key Click Any Button    ${LoginPage['Login_to_your_account']['Login_btn']}

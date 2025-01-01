@@ -6,6 +6,7 @@ Resource    ../wrapper/accountCreatedPage.robot
 Resource    ../wrapper/deleteAccountPage.robot
 
 Suite Setup    Suite Initialization
+Suite Teardown    Close browser
 
 *** Keywords ***
 Suite Initialization
