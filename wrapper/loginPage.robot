@@ -32,5 +32,13 @@ Enter correct email address and password
     ...     ${LoginPage['Login_to_your_account']['Email_Address_txtbx']}               ${env['CRED']['EMAIL']}
     ...     ${LoginPage['Login_to_your_account']['Password_txtbx']}      ${env['CRED']['PASSWORD']}
 
+Enter incorrect email address and incorrect password
+    Key Enter Username And Password
+    ...     ${LoginPage['Login_to_your_account']['Email_Address_txtbx']}               ${env['CRED']['IN_EMAIL']}
+    ...     ${LoginPage['Login_to_your_account']['Password_txtbx']}      ${env['CRED']['IN_PASSWORD']}
+
+Verify Your email or password is incorrect! message is visible
+    Key Verify Expected Text Is Visible    Your email or password is incorrect!
+
 Click 'Login' button
     Key Click Any Button    ${LoginPage['Login_to_your_account']['Login_btn']}
