@@ -21,6 +21,7 @@ Key Click Any Button
     [Arguments]     ${element}
     wait until element is visible    ${element}
     wait until element is enabled    ${element}
+    set focus to element    ${element}
     click element    ${element}
 
 Key Verify Expected Text Is Visible
@@ -69,3 +70,9 @@ Key Upload The File
 
 Key Handle Alert
     handle alert    ACCEPT
+
+Key get product list
+    [Arguments]    ${locator}       ${count}
+     ${item_elements}=      Get WebElements    ${locator}
+     ${item_count}=    Get Length    ${item_elements}
+     should be equal as strings    ${count}    ${item_count}
