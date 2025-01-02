@@ -17,7 +17,7 @@ Verify user is navigated to ALL PRODUCTS page successfully
     Key Verify Expected Text Is Visible    All Products
 
 The products list is visible
-    Key get product list    ${ProdutsPage['AllProducts_lst']}       34
+    Key get product list    ${ProdutsPage['AllProducts_lst']}       35
 
 Enter product name in search input and click search button
     Key Input Text Into Text Field      ${ProdutsPage['ProductSearch_txtbx']}       Jeans
