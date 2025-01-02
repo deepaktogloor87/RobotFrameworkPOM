@@ -18,3 +18,16 @@ Verify user is navigated to ALL PRODUCTS page successfully
 
 The products list is visible
     Key get product list    ${ProdutsPage['AllProducts_lst']}       35
+
+Enter product name in search input and click search button
+    Key Input Text Into Text Field      ${ProdutsPage['ProductSearch_txtbx']}       Jeans
+    Key Click Any Button    ${ProdutsPage['Search_btn']}
+
+Verify 'SEARCHED PRODUCTS' is visible
+    Key Verify Expected Text Is Visible    Soft Stretch Jeans
+    Key Verify Expected Text Is Visible    Regular Fit Straight Jeans
+    Key Verify Expected Text Is Visible    Grunt Blue Slim Fit Jeans
+
+Verify all the products related to search are visible
+    Key get product list    ${ProdutsPage['AllProducts_lst']}       4
+
