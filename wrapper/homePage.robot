@@ -40,3 +40,16 @@ Click 'Delete Account' button
 
 Click On Contact Us button
     Key Click Any Button    ${HomePage['Navigation_bar']['ContactUs_lnk']}
+
+Scroll down to footer
+    Key Scroll To Element    ${HomePage['Footer']['Subscription_txt']}
+
+Verify text 'SUBSCRIPTION'
+    Key Verify Expected Text Is Visible    Subscription
+
+Enter email address in input and click arrow button
+    Key Input Text Into Text Field      ${HomePage['Footer']['EmailAddress_txtbx']}       ${env['CRED']['EMAIL']}
+    Key Click Any Button    ${HomePage['Footer']['ArrowButton_btn']}
+
+Verify success message 'You have been successfully subscribed!' is visible
+    Key Verify Expected Text Is Visible    You have been successfully subscribed!

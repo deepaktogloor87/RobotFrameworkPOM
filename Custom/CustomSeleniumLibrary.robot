@@ -7,6 +7,7 @@ Key Launch Browser
     [Arguments]     ${BROWSER}
     open browser    ${NONE}      ${BROWSER}
     maximize browser window
+    delete all cookies
 
 Key Navigate To Url
     [Arguments]     ${URL}
@@ -76,3 +77,7 @@ Key get product list
      ${item_elements}=      Get WebElements    ${locator}
      ${item_count}=    Get Length    ${item_elements}
      should be equal as strings    ${count}    ${item_count}
+
+Key Scroll To Element
+    [Arguments]    ${element}
+    scroll element into view    ${element}

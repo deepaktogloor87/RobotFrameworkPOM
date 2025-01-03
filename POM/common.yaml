@@ -10,3 +10,7 @@ Navigation_bar:
   Category_txt: //h2[normalize-space()='Category']
   ContactUs_lnk: //a[normalize-space()='Contact us']
   TestCases_lnk: (//a[normalize-space()='Test Cases'])[1]
+Footer:
+  Subscription_txt: //div[@class='single-widget']/h2
+  EmailAddress_txtbx: //input[@id='susbscribe_email']
+  ArrowButton_btn: //button[@id='subscribe']
